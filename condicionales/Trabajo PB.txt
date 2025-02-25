@@ -1,0 +1,153 @@
+num1=int(input("ingrese un numero"))
+num2=int(input("ingrese otro numero"))
+if num1>num2:
+   print(num1%num2)
+elif num1<num2:
+   print(num1*num2)
+else:
+   print(num1+num2)
+
+edad=int(input("Bienvenido al sistema de edad porfavor digite su edad"))
+if edad<12:
+   print("esta en el rango de proteccion para niños")
+elif edad>60:
+   print("esta en el rango de proteccion para adultos mayores")
+else:
+   print("No cumple con los requisitos para la proteccion")
+
+num1=int(input("ingrese el primer numero"))
+num2=int(input("ingrese el segundo numero"))
+num3=int(input("ingrese el tercer numero"))
+if num1==num2==num3:
+   print("Los tres numeros son Iguales")
+elif num1>num2<num3:
+    print("los 3 son distintos")
+else:
+   print("Hay dos iguales")
+
+añoactual=int(input("Ingrese  año actual"))
+añocualquiera=int(input("Ingrese un año cualquiera"))
+if añoactual>añocualquiera:
+   print(f"han pasado estos años",{añoactual-añocualquiera})
+else:
+   print(f"faltan estos años para llegar a",{añoactual+añocualquiera})
+edadperro=int(input("ingrese la edad del perro"))
+añoshumanos=float(input("ingrese cuanto equivale un año humano en perros"))
+print(f"la edad del perro en años humanos es:{edadperro*añoshumanos}")
+
+medidasfondo=float(input("ingrese las medidas de fondo"))
+medidasfrente=float(input("ingrese las medidas de frente"))
+m=valorm=760000
+print(f"el valor total del lote es:{medidasfondo*medidasfrente*m}")
+
+numero=float(input("Introduce un número: "))
+numerocubo = numero ** 3
+divididoen5 = numerocubo / 5
+resultadocon10000 = divididoen5 + 10000
+mitadresultado = resultadocon10000 / 2
+print(f"La mitad del resultado final es: {mitadresultado}")
+
+print("Responda si o no")
+rta=input("La via por Silvania esta congestiobada?")
+if rta=="si":
+    print("toamar via por Sibate")
+elif rta=="no":
+    print("Tomar por via Silvania")
+else: 
+    print("Busque una opcion diferente")
+
+num=int(input("ingrese numero"))
+if num%2==0:
+    print("par")
+else:
+    print("impar")
+
+num=int(input("ingrese un numero"))
+if num<0:
+    print("negativo")
+elif num>0:
+     print("positivo")
+else: 
+    print("es neutro")
+
+num1=int(input("ingrese un numero"))
+num2=int(input("ingrese el otro numero"))
+if num1>num2:
+    print("Es ascendente")
+elif num2>num1:
+    print("es descendente")
+else:
+    print("Son Iguales")
+
+Trabajo en Casa
+#Punto numero 1
+A = int(input("Ingrese el primer número: "))
+B = int(input("Ingrese el segundo número: "))
+C = int(input("Ingrese el tercer número: "))
+
+sumatotal = A + B + C
+mayor = max(A, B, C)    
+menor = min(A, B, C)    
+medio = sumatotal - mayor - menor  
+
+print("El valor del medio es:", medio)
+
+#Punto numero 3
+num = int(input("Ingrese un número entre 0 y 9999: "))
+
+if num < 0 or num > 9999:
+    print("Número fuera de rango. Fin del programa.")
+else:
+    if num < 10:
+        print("El número tiene 1 cifra.")
+    elif num < 100:
+        print("El número tiene 2 cifras.")
+    elif num < 1000:
+        print("El número tiene 3 cifras.")
+    else:
+        print("El número tiene 4 cifras.")
+
+#Punto numero 4
+nota = int(input("Ingrese una nota entre 0 y 10: "))
+
+if nota < 0 or nota > 10:
+    print("Nota fuera de rango. Fin del programa.")
+else:
+    if nota <= 3:
+        print("Insuficiente")
+    elif nota <= 5:
+        print("Suficiente")
+    elif nota <= 7:
+        print("Bien")
+    elif nota <= 9:
+        print("Notable")
+    else:
+        print("Sobresaliente")
+
+#Punto 6
+dia = int(input("Ingrese un número entre 1 y 365: "))
+
+if dia < 1 or dia > 365:
+    print("Número fuera de rango. Fin del programa.")
+else:
+    
+    meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+             "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+    diaspormes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    
+    mes = 0  
+    while dia > diaspormes[mes]:  
+        dia -= diaspormes[mes]
+        mes += 1
+    
+    print(f"Corresponde al {dia} de {meses[mes]}")
+
+#Punto 7
+horas = int(input("Ingrese el número de horas trabajadas en la semana: "))
+
+if horas <= 40:
+    salario = horas * 2600
+else:
+    salario = (40 * 2600) + ((horas - 40) * 5000)
+
+print("El salario semanal es: $", salario)
