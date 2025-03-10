@@ -1,0 +1,91 @@
+Punto 1
+def encontrardivisores(num):
+    for i in range(1, num + 1):
+        if num % i == 0:
+            print(i)
+
+num = int(input("Número: "))
+encontrardivisores(num)
+Punto 3
+def numeroperfecto(num):
+    div = sum(i for i in range(1, num) if num % i == 0)
+    return div == num
+
+num = int(input("Número: "))
+
+if numeroperfecto(num):
+    print(f"El número {num} es perfecto")
+else:
+    print(f"El número {num} no es perfecto")
+Punto 5
+def esprimo(num):
+    cont = 1
+    x = 0
+    while cont <= num:
+        if num % cont == 0:
+            x += 1
+        cont += 1
+    return x == 2
+
+def encontrarprimos(hasta):
+    num = 1
+    while num <= hasta:
+        if esprimo(num):
+            print(num, end=", ")
+        num += 1
+
+def main():
+    encontrarprimos(1000)
+
+main()
+Punto 7
+def encontrarnumeronatural(limite):
+    suma = 0
+    n = 0
+    while suma <= limite:
+        n += 1
+        suma += n
+    return n
+
+limite = int(input("Digite un número: "))  
+resultado = encontrarnumeronatural(limite)
+print(f"El número natural más pequeño es {resultado}")  
+Punto 9
+def potencia(x, n):
+    if n == 0:
+        return 1
+    elif n < 0:
+        return 1 / potencia(x, -n)
+    
+    resultado = 1
+    for i in range(n):
+        resultado *= x
+    return resultado
+print(potencia(2, 3))   
+print(potencia(5, 0))   
+print(potencia(2, -2))  
+Punto 11
+def dividir(num1, num2):
+    mayor, menor = max(num1, num2), min(num1, num2)
+    cociente = 0
+    residuo = mayor
+
+    while residuo >= menor:
+        residuo -= menor
+        cociente += 1
+
+    return cociente, residuo
+
+num1 = int(input("Ingrese el primer número: "))  
+num2 = int(input("Ingrese el segundo número: "))  
+
+cociente, residuo = dividir(num1, num2)
+
+print(f"El cociente es {cociente}")  
+print(f"El residuo es {residuo}")  
+Punto 13
+def invertirnumero(num):
+    return num[::-1]  
+
+num = input("Digite un número: ")
+print(f"El número inverso es:{invertirnumero(num)}")
