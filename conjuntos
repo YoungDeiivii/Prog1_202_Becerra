@@ -1,0 +1,43 @@
+var={1,2,3}
+c1=set()
+print(type(var))
+print(type(c1))
+#print(var[0]) #no se puede indexar
+print(var)
+
+nuevo=set(["dos","uno","tres"])
+print(nuevo)
+nuevo.add(200)
+print(nuevo)
+lista_nombres=["juan","david","katerin"]
+nuevo.update(lista_nombres)
+print(nuevo)
+nuevo.remove(200)
+print(nuevo)
+nuevo.discard(300)
+print(nuevo)
+numeros={8,2,7,3,0,1,4,5,6}
+print(numeros)
+numeros.pop()
+print(numeros)
+numeros.clear()
+print(numeros)
+a={1,2,3,4,7}
+b={4,7,8,5,6}
+union=a|b
+print(f"la union={union}")
+inter=a&b
+print(f"la interseccion={inter}")
+dif=a-b
+print(f"la diferencia={dif}")
+difsim=a^b
+print(f"la dif simetrica={difsim}")
+dif(7 in a)
+for dato in a:
+    print(dato)
+for dato in b:
+    print(dato)
+
+pares={2,4,6,8}
+print(pares.issubset(a|b))
+print(a|b)pares.issuperset(a)
