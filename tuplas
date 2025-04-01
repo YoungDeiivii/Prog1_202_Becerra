@@ -1,0 +1,135 @@
+lista=[]
+tupla=(12,13,14,15)
+print(type(tupla))
+print(tupla[0])
+print(tupla[-1])
+for dato in tupla:
+    print(dato)
+import random
+tupla1=()
+cantidad=random.randint (5,15)
+for i in range (cantidad):
+    num=random.randint(1,100)
+    tupla1=tupla1+(num,)
+
+print(tupla1)
+import random
+def llenartupla():
+    tupla=()
+    cantidad=random.randint(5,15)
+    for i in range(cantidad):
+        num=random.randint(1,100)
+        tupla1=tupla1+(num,)
+    return tupla1
+import random
+
+#5. Llenar un arreglo de n elementos con números generados con la función random.
+def generararreglo(n):
+    arreglo = []
+    numeroanterior = 0
+    for i in range(n):
+        siguientedecena = (numeroanterior // 10 + 1) * 10
+        numero = random.randint(numeroanterior + 1, siguientedecena - 1)
+        arreglo.append(numero)
+        numeroanterior = numero
+    return tupla(arreglo)
+#6.-Si el elemento esta por encima del promedio, debajo o es igual
+def compararconpromedio(arreglo):
+    promedio = sum(arreglo) / len(arreglo)
+    comparaciones = []
+    
+    for numero in arreglo:
+        if numero > promedio:
+            comparaciones.append(f'{numero} está por encima del promedio')
+        elif numero < promedio:
+            comparaciones.append(f'{numero} está debajo del promedio')
+        else:
+            comparaciones.append(f'{numero} es igual al promedio')
+    
+    return comparaciones
+comparaciones = compararconpromedio(arreglo)
+for comparacion in comparaciones:
+    print(comparacion)
+#7.Función para verificar si un número es primo
+def esprimo(numero):
+    if numero < 2:
+        return False
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            return False
+    return True
+def primosenarreglo(arreglo):
+    primos = [numero for numero in arreglo if esprimo(numero)]
+    return len(primos), primos
+
+
+cantidadprimos, primos = primosenarreglo(arreglo)
+print(f'Cantidad de primos: {cantidadprimos}')
+print(f'Primos encontrados: {primos}')
+t1=(1,2,3,4,5)
+t2=(5,6,7,8,9)
+
+def sumaTupla(tupla):
+    suma=0
+    for x in tupla:
+        suma+=x
+    return suma
+
+print(sumaTupla(t1))
+print(sumaTupla(t2))
+print(sumaTupla((10,20,30)))
+
+def comparaSumas(tupla1,tupla2):
+    s1=sumaTupla(tupla1)
+    s2=sumaTupla(tupla2)
+    if s1>s2:
+        return f"s1 es mayor={s1}"
+    elif s2>s1:
+        return f"s2 es mayor={s2}"
+    else:
+        return f"las sumas son iguales"
+
+print(comparaSumas(t1,t2))
+
+
+import random
+import math
+
+# Punto 5: Llenar arreglo de n elementos donde cada número es mayor que el anterior
+def llenararreglonumeros(n):
+    arreglo = []
+    numeroanterior = 0
+
+    for i  in range(n):
+        
+        limite = (numeroanterior // 10 + 1) * 10
+        numeroactual = random.randint(numeroanterior + 1, limite - 1)
+        arreglo.append(numeroactual)
+        numeroanterior = numeroactual
+    
+    return arreglo
+
+# Punto 6: Buscar cuántas veces está un número y en qué posiciones
+def buscarnumero(arreglo, numero):
+    posiciones = [i for i, x in enumerate(arreglo) if x == numero]
+    cantidad = len(posiciones)
+    return cantidad, posiciones
+
+# Punto 7: Hallar el factorial de los números de una lista
+def hallarfactoriales(lista):
+    factoriales = [math.factorial(num) for num in lista]
+    return factoriales
+
+# Llamar a la función para llenar el arreglo
+n = 10  
+arreglo = llenararreglonumeros(n)
+print(f"Arreglo generado: {arreglo}")
+
+# Buscar un número específico en el arreglo
+numerobuscar = 15  
+cantidad, posiciones = buscarnumero(arreglo, numerobuscar)
+print(f"El número {numerobuscar} aparece {cantidad} veces en las posiciones: {posiciones}")
+
+# Hallar el factorial de los números en el arreglo
+factoriales = hallarfactoriales(arreglo)
+print(f"Factoriales de los números en el arreglo: {factoriales}")
