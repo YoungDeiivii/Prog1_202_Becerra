@@ -1,0 +1,64 @@
+estudiante={
+    "nombre":"Maria Diaz",
+    "Dni":12345,
+    "email":"maria@gmail.com"    
+}
+print(estudiante)
+print(estudiante["nombre"])
+estudiante["semestre"]=9
+print(estudiante)
+x=100
+print(type(x))
+print(estudiante.keys())
+print(estudiante.values())
+print(estudiante.items())
+
+Ubicacion={
+    "nombre":"David",
+    "Pais":"Canada",
+    "Ip":"100.42.255.255"
+}
+print(Ubicacion)
+print(Ubicacion["nombre"])
+Ubicacion["Pais"]
+print(Ubicacion)
+print(Ubicacion.keys())
+print(Ubicacion.values())
+print(Ubicacion.items())
+[ ]
+for clave in Ubicacion.keys():
+    print(clave)
+for valor in Ubicacion.values():
+    print(valor)
+
+for tupla in Ubicacion.items():
+    print(tupla)
+
+for key,val in Ubicacion.items():
+    print(f"la clave es:{key}")
+    print(f"el valor es:{val}")
+    
+palabrabuscar=(input("ingrese la palabra que quiere buscar el significado"))  
+DiccionarioEsMu={
+    
+    "Chimba": "Agradable",
+    "Chuchumeco": "Desagradable",
+     "Chichipato": "Tacaño",
+     "Achantar": "Sentir mal",
+     "Pinche": "minúsculo",
+     "Achajuanar": "Andar despacio",
+     "Ipqua": "Gracias",
+     "Fagua": "Estrella",
+     "Chisa": "Larva=Coleoptera",
+     "Quincha": "AvesTrochilinae,colibrí",
+     "Yc cubun puynuca agensuca": "A cada palabra que le dicen se enoja",
+     "Muysca achic achic": "A cada hombre",
+}
+if palabrabuscar in DiccionarioEsMu:
+    print(f"El significado de '{palabrabuscar}' es: {DiccionarioEsMu[palabrabuscar]}")
+else:
+    print(f"La palabra '{palabrabuscar}' no es muisca.")
+
+for clave,valor in DiccionarioEsMu.items():
+    if palabrabuscar==valor:
+        print(clave)
